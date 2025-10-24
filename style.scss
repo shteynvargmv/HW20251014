@@ -1,0 +1,311 @@
+body {
+    background-image: url('./bg_pic.jpg');
+    background-size: cover;
+
+    .list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .card {
+        display: grid;
+        grid-template-rows: repeat(10, 1fr);
+        align-items: center;
+        margin: 15px 0;
+        min-width: 200px;
+        height: 400px;
+        background-color: RGBA(146, 204, 244, 0.75);
+
+        .card-img {
+            display: grid;
+            grid-row-start: 1;
+            grid-row-end: 8;
+            justify-self: center;
+            align-items: center;
+
+            .icon-img {
+                padding: 5px;
+                position: absolute;
+                top: 0px;
+                height: 65%;
+                max-width: 190px;
+                justify-self: center;
+            }
+        }
+
+        .card-title {
+            position: relative;
+            font-size: 3vh;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            grid-row-start: 8;
+            grid-row-end: 10;
+        }
+
+        .card-year {
+            position: relative;
+            font-size: 2vh;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            grid-row-start: 10;
+        }
+
+        .card-id {
+            display: none;
+        }
+
+        &:hover {
+            background-color: gray;
+        }
+    }
+
+    .chb {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        font-size: 2vh;
+    }
+
+    .page {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        font-size: 1vh;
+        margin: 15px 0;
+
+        .btn-page {
+            background-color: RGBA(0, 0, 0, 0);
+        }
+
+        .left {
+            grid-column-start: 4;
+            grid-column-end: 5;
+            text-align: right;
+        }
+
+        .page-num {
+            grid-column-start: 5;
+            grid-column-end: 6;
+            color: black;
+            text-align: center;
+            font-size: 25px;
+            background-color: #95bef7;
+            border-radius: 5px;
+        }
+
+        .right {
+            grid-column-start: 6;
+            grid-column-end: 7;
+            text-align: left;
+        }
+
+        .pagetxt {
+            grid-column-start: 1;
+            grid-column-end: 10;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+            background-color: RGBA(146, 204, 244, 0.85);
+        }
+    }
+
+    .mb-3 {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        width: auto;
+    }
+
+    .s {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    .y {
+        grid-column-start: 5;
+        grid-column-end: 5;
+    }
+    .srch{
+        grid-column-start: 6;
+        grid-column-end: 9;
+    }
+
+    .form-control {
+        width: auto !important;
+    }
+
+    .label {
+        color: white;
+        font-size: 3vh;
+    }
+
+    .srch {
+        background-color: RGBA(146, 204, 244, 0.75);
+        color: white;
+
+        &:hover {
+            background-color: gray;
+        }
+    }
+
+    .detailed {
+        position: absolute;
+        top: 20vh;
+        left: 20vw;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #95bef7;
+        border-radius: 5px;
+        width: 600px;
+        height: 400px;
+        z-index: 10;
+        display: none;
+        grid-template-columns: 1.5fr 4.1fr 2.9fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "titleLabel title close"
+            "genreLabel genre detailed-img"
+            "countryLabel country detailed-img"
+            "ratingLabel rating detailed-img"
+            "releasedLabel released detailed-img"
+            "runtimeLabel runtime detailed-img"
+            "directorLabel director detailed-img"
+            "plotLabel plot plot"
+            "actorsLabel actors actors"
+            "awordsLabel awords awords";
+
+        .plot {
+            grid-area: plot;
+            font-size: 12px;
+        }
+
+        .actors {
+            grid-area: actors;
+            font-size: 12px;
+        }
+
+        .awards {
+            grid-area: awords;
+            font-size: 12px;
+        }
+
+        .detailed-img {
+            grid-area: img;
+            display: grid;
+            justify-self: right;
+            align-items: center;
+
+            .detailed-icon-img {
+                padding: 5px;
+                position: absolute;
+                top: 0px;
+                height: 65%;
+                max-width: 190px;
+                justify-self: right;
+            }
+        }
+
+        .title {
+            grid-area: title;
+            font-size: 12px;
+        }
+
+        .genre {
+            grid-area: genre;
+            font-size: 12px;
+        }
+
+        .country {
+            grid-area: country;
+            font-size: 12px;
+        }
+
+        .rating {
+            grid-area: rating;
+            font-size: 12px;
+        }
+
+        .released {
+            grid-area: released;
+            font-size: 12px;
+        }
+
+        .runtime {
+            grid-area: runtime;
+            font-size: 12px;
+        }
+
+        .director {
+            grid-area: director;
+            font-size: 12px;
+        }
+
+        .year {
+            grid-area: year;
+            font-size: 12px;
+        }
+
+        .titleLabel {
+            grid-area: titleLabel;
+            font-size: 12px;
+        }
+
+        .genreLabel {
+            grid-area: genreLabel;
+            font-size: 12px;
+        }
+
+        .countryLabel {
+            grid-area: countryLabel;
+            font-size: 12px;
+        }
+
+        .ratingLabel {
+            grid-area: ratingLabel;
+            font-size: 12px;
+        }
+
+        .releasedLabel {
+            grid-area: releasedLabel;
+            font-size: 12px;
+        }
+
+        .runtimeLabel {
+            grid-area: runtimeLabel;
+            font-size: 12px;
+        }
+
+        .directorLabel {
+            grid-area: directorLabel;
+            font-size: 12px;
+        }
+
+        .plotLabel {
+            grid-area: plotLabel;
+            font-size: 12px;
+        }
+
+        .actorsLabel {
+            grid-area: actorsLabel;
+            font-size: 12px;
+        }
+
+        .awardsLabel {
+            grid-area: awordsLabel;
+            font-size: 12px;
+        }
+
+        .close {
+            grid-area: close;
+            justify-self: right;
+            padding: 5px 5px;
+            background-color: #95bef7;
+            border-radius: 5px;
+            z-index: 100;
+        }
+    }
+}
+.mt-4{
+    min-width: 516px !important;
+}

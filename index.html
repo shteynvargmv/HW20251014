@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="container mt-4">
+        <form name="movieSearch" class="input-group mb-3">
+            <input list="s" name="s" type="text" class="form-control s" placeholder="Movie name"
+                aria-describedby="button-addon2">
+            <input list="y" name="y" type="text" class="form-control y" placeholder="Year"
+                aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary srch" type="submit" id="button-addon2">Search</button>
+        </form>
+        <form name="movieType" class="input-group chb">
+            <input type="radio" value="movie" id="movie" name="type" checked />
+            <label class="label" for="movie">Movie</label>
+            <input type="radio" value="series" id="series" name="type" />
+            <label class="label" for="series">Series</label>
+            <input type="radio" value="episode" id="episode" name="type" />
+            <label class="label" for="episode">Episode</label>
+        </form>
+        <form name="moviePage" class="page">
+        </form>
+        <div class="list">
+        </div>
+
+        <div class='detailed'>
+            <div class="plot"></div>
+            <div class="actors"></div>
+            <div class="awards"></div>
+            <div class="detailed-img"></div>
+            <div class="title"></div>
+            <div class="genre"></div>
+            <div class="country"></div>
+            <div class="rating"></div>
+            <div class="released"></div>
+            <div class="runtime"></div>
+            <div class="director"></div>
+            <div class="year"></div>
+            <div class="titleLabel"><b>Title</b></div>
+            <div class="genreLabel"><b>Genre</b></div>
+            <div class="countryLabel"><b>Country</b></div>
+            <div class="ratingLabel"><b>Rating</b></div>
+            <div class="releasedLabel"><b>Released</b></div>
+            <div class="runtimeLabel"><b>Runtime</b></div>
+            <div class="directorLabel"><b>Director</b></div>
+            <div class="plotLabel"><b>Plot</b></div>
+            <div class="actorsLabel"><b>Actors</b></div>
+            <div class="awardsLabel"><b>Awards</b></div>
+            <div class="empty"></div>
+            <div class="close">
+                <button type="button" class="btn-close close" data-bs-dismiss="alert" aria-label="Close"></button></div>
+            </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
